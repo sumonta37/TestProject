@@ -8,9 +8,23 @@ group = 'com.simple'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
+
+bootJar {
+    mainClassName = 'com.delight.demo.SpringBootAwsAppApplication'
+}
+
 repositories {
 	mavenCentral()
 }
+
+jar {
+    archiveBaseName = 'spring-boot-aws-app'
+    archiveVersion =  '0.1.0'
+}
+// end::jar[]
+
+
+
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
@@ -18,6 +32,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-test {
+test { 	 
 	useJUnitPlatform()
 }
+
+
+
